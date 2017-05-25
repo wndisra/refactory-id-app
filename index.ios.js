@@ -1,7 +1,7 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Simple React Native App for Refactory preparation (1st task)
+ * https://github.com/wlisrausr/refactory-id-app
+ * @author Wanda Ichsanul Isra
  */
 
 import React, { Component } from 'react';
@@ -9,22 +9,22 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image,
 } from 'react-native';
 
 export default class RefactoryIdApp extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
+        <Image
+          style={styles.profileImg}
+          source={require('./imgs/wlisra-profile.jpg')}
+        />
+
+        <Text style={styles.textData}>
+          Wanda Ichsanul Isra{'\n'}
+          #Luciano
         </Text>
       </View>
     );
@@ -36,18 +36,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F5FCFF'
   },
-  welcome: {
-    fontSize: 20,
+  textData: {
+    fontSize: 22,
     textAlign: 'center',
-    margin: 10,
+    margin: 20,
+    fontWeight: 'bold',
+    color: '#586069',
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  profileImg: {
+    height: 180,
+    width: 180,
+    borderRadius: 90
+  }
 });
 
 AppRegistry.registerComponent('RefactoryIdApp', () => RefactoryIdApp);
