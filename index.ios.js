@@ -24,7 +24,7 @@ export default class RefactoryIdApp extends Component {
 
         <Text style={styles.textData}>
           Wanda Ichsanul Isra{'\n'}
-          #Luciano
+          Luciano (Batch 4)
         </Text>
       </View>
     );
